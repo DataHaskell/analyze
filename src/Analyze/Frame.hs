@@ -15,9 +15,6 @@ import           Data.Vector         (Vector)
 
 import           Analyze.Common
 
--- TODO: Remove me after merge
-data Series a b
-
 -- | In-memory row-oriented frame with columns named by `k` and values by `v`
 data Frame r c = Frame
   { -- Ordered vector of row names
