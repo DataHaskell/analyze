@@ -31,12 +31,6 @@ data Frame r c = Frame
   } deriving (Eq, Read, Show)
 
 
-instance Monoid (Frame r c) where
-    mempty = empty
-    mappend (Frame rk ck lookup fdata) (Frame rk' ck' lookup' fdata')
-      = RowAppend $ Frame (rk <> rk') (ck <> ck') (lookup <> lookup') (fdata <> fdata')
-
-
 -- | Get the vector of keys of a frame
 keys :: Frame r c -> Vector c
 keys = _frameColumnKeys
