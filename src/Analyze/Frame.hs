@@ -14,6 +14,7 @@ import qualified Data.Vector         as Vector
 import           Data.Vector         (Vector)
 
 import           Analyze.Common
+import           Analyze.Series
 
 -- | In-memory row-oriented frame with columns named by `k` and values by `v`
 data Frame r c = Frame
